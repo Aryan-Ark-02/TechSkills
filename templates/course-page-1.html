@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Bootcamp - Course Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='course-page.css') }}">
+</head>
+
+<body>
+    <div class="course-layout">
+        <!-- Course Header -->
+        <header class="course-header">
+            <button class="menu-button" id="menu-toggle" aria-label="Toggle sidebar">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="#" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+                <span>Back</span>
+            </a>
+            <h1 class="course-title">Master Web Development in 12 Weeks </h1>
+        </header>
+
+        <div class="course-content">
+            <!-- Sidebar Overlay (Mobile) -->
+            <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+            <!-- Course Sidebar -->
+            <aside class="course-sidebar" id="course-sidebar">
+                <div class="module-item">
+                    <div class="module-header" data-module="module1">
+                        <span>Module 1: HTML & CSS Fundamentals</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="module-content" id="module1-content">
+                        <a href="{{ url_for('course_page', course='web_development', module='module1', lesson='lesson1') }}" class="lesson-item {{ 'active' if lesson == 'lesson1' else '' }}" data-lesson="lesson1">Lesson 1: HTML Basics</a>
+                        <a href="{{ url_for('course_page', course='web_development', module='module1', lesson='lesson2') }}" class="lesson-item {{ 'active' if lesson == 'lesson2' else '' }}" data-lesson="lesson2">Lesson 2: CSS Styling</a>
+                        <a href="{{ url_for('course_page', course='web_development', module='module1', lesson='lesson3') }}" class="lesson-item {{ 'active' if lesson == 'lesson3' else '' }}" data-lesson="lesson3">Lesson 3: Responsive Design</a>
+                        <a href="{{ url_for('course_page', course='web_development', module='module1', lesson='lesson4') }}" class="lesson-item {{ 'active' if lesson == 'lesson4' else '' }}" data-lesson="lesson4">Lesson 4: Flexbox & Grid</a>
+                        <a href="{{ url_for('course_page', course='web_development', module='module1', lesson='lesson5') }}" class="lesson-item {{ 'active' if lesson == 'lesson5' else '' }}" data-lesson="lesson5">Lesson 5: CSS Animations</a>
+                    </div>
+                </div>
+
+                <div class="module-item">
+                    <div class="module-header" data-module="module2">
+                        <span>Module 2: JavaScript Fundamentals</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="module-content" id="module2-content">
+                        <a href="#" class="lesson-item" data-lesson="lesson6">Lesson 1: JS Syntax Basics</a>
+                        <a href="#" class="lesson-item" data-lesson="lesson7">Lesson 2: DOM Manipulation</a>
+                        <a href="#" class="lesson-item" data-lesson="lesson8">Lesson 3: Async JavaScript</a>
+                        <a href="#" class="lesson-item" data-lesson="lesson9">Lesson 4: ES6 Features</a>
+                    </div>
+                </div>
+
+                <div class="module-item">
+                    <div class="module-header" data-module="module3">
+                        <span>Module 3: Frontend Frameworks</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="module-content" id="module3-content">
+                        <a href="#" class="lesson-item" data-lesson="lesson10">Lesson 1: React Basics</a>
+                        <a href="#" class="lesson-item" data-lesson="lesson11">Lesson 2: Components & Props</a>
+                        <a href="#" class="lesson-item" data-lesson="lesson12">Lesson 3: State Management</a>
+                        <a href="#" class="lesson-item" data-lesson="lesson13">Lesson 4: React Router</a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="course-main">
+                <!-- Video Player -->
+                <div class="video-container">
+                    <div class="video-placeholder" id="video-placeholder">
+                        Lesson 1: HTML Basics
+                    </div>
+                    <video id="lesson-video" controls style="display: none;">
+                        <source src="{{ url_for('static', filename=video_url) }}"
+                            type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <!-- Lesson Content -->
+                <div class="lesson-content">
+                    <h2 class="lesson-title">Lesson 2: CSS Styling Fundamentals</h2>
+
+                    <div class="lesson-description">
+                        <p>This lesson covers essential CSS concepts for creating beautiful web layouts. Learn about selectors, box model, positioning, and modern layout techniques using Flexbox and Grid.</p>
+
+                        <p>By the end of this lesson, you'll be able to:</p>
+                        <ul>
+                            <li>Apply CSS styles to HTML elements</li>
+                            <li>Understand the CSS box model and positioning</li>
+                            <li>Create responsive layouts with Flexbox and Grid</li>
+                            <li>Implement CSS transitions and animations</li>
+                        </ul>
+                    </div>
+
+                    <div class="resources-section">
+                        <h3 class="resources-title">Resources</h3>
+                        <ul>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN CSS Documentation</a></li>
+                            <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks Guide</a></li>
+                            <li><a href="https://codepen.io/" target="_blank">Practice Exercises on CodePen</a></li>
+                            <li><a href="#" target="_blank">Cheat Sheet (PDF)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="next-steps">
+                        <h3 class="resources-title">Next Steps</h3>
+                        <p>After completing this lesson, proceed to Lesson 3: Responsive Design to learn about media queries and adaptive layouts. Practice creating different layouts using the techniques learned in this lesson.</p>
+                    </div>
+
+                    <div class="p-4 bg-muted rounded mb-4">
+                        <h4 class="font-medium mb-2">Need Help?</h4>
+                        <p class="text-muted mb-2">Stuck on CSS concepts? Get assistance through:</p>
+                        <ul class="text-muted mb-4">
+                            <li>Web Development Discord Community</li>
+                            <li>Weekly Code Review Sessions</li>
+                            <li>1:1 Pair Programming Support</li>
+                        </ul>
+                        <button class="btn btn-primary">Get Help Now</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='course-page.js') }}"></script>
+</body>
+</html>

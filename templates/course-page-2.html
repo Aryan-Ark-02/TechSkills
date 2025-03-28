@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science Bootcamp - Course Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='course-page.css') }}">
+</head>
+
+<body>
+    <div class="course-layout">
+        <!-- Course Header -->
+        <header class="course-header">
+            <button class="menu-button" id="menu-toggle" aria-label="Toggle sidebar">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="#" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+                <span>Back</span>
+            </a>
+            <h1 class="course-title">Master Data Science in 12 Weeks {{video_url}}</h1>
+        </header>
+
+        <div class="course-content">
+            <!-- Sidebar Overlay (Mobile) -->
+            <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+            <!-- Course Sidebar -->
+            <aside class="course-sidebar" id="course-sidebar">
+                <div class="module-item">
+                    <div class="module-header" data-module="module1">
+                        <span>Module 1: Python Fundamentals</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="module-content" id="module1-content">
+                        <a href="{{ url_for('course_page', course='data_science', module='module1', lesson='lesson1') }}" class="lesson-item {{ 'active' if lesson == 'lesson1' else '' }}" data-lesson="lesson1">Lesson 1: Introduction to Python</a>
+                        <a href="{{ url_for('course_page', course='data_science', module='module1', lesson='lesson2') }}" class="lesson-item {{ 'active' if lesson == 'lesson2' else '' }}" data-lesson="lesson2">Lesson 2: Data Structures</a>
+                        <a href="{{ url_for('course_page', course='data_science', module='module1', lesson='lesson3') }}" class="lesson-item {{ 'active' if lesson == 'lesson3' else '' }}" data-lesson="lesson3">Lesson 3: Functions and Modules</a>
+                        <a href="{{ url_for('course_page', course='data_science', module='module1', lesson='lesson4') }}" class="lesson-item {{ 'active' if lesson == 'lesson4' else '' }}" data-lesson="lesson4">Lesson 4: NumPy Basics</a>
+                        <a href="{{ url_for('course_page', course='data_science', module='module1', lesson='lesson5') }}" class="lesson-item {{ 'active' if lesson == 'lesson5' else '' }}" data-lesson="lesson5">Lesson 5: Pandas Introduction</a>
+                    </div>
+                </div>
+
+                <div class="module-item">
+                    <div class="module-header" data-module="module3">
+                        <span>Module 2: Data Visualization</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="module-content" id="module3-content">
+                        <a href="{{ url_for('course_page', course='data_science', module='module2', lesson='lesson6') }}" class="lesson-item {{ 'active' if lesson == 'lesson6' else '' }}" data-lesson="lesson10">Lesson 1: Matplotlib Basics</a>
+                        <a href="{{ url_for('course_page', course='data_science', module='module2', lesson='lesson7') }}" class="lesson-item {{ 'active' if lesson == 'lesson7' else '' }}" data-lesson="lesson11">Lesson 2: Advanced Plotting</a>
+                        <a href="{{ url_for('course_page', course='data_science', module='module2', lesson='lesson12') }}" class="lesson-item {{ 'active' if lesson == 'lesson12' else '' }}" data-lesson="lesson12">Lesson 3: Seaborn Library</a>
+                        <a href="{{ url_for('course_page', course='data_science', module='module2', lesson='lesson13') }}" class="lesson-item {{ 'active' if lesson == 'lesson13' else '' }}" data-lesson="lesson13">Lesson 4: Interactive Visualizations</a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="course-main">
+                <!-- Video Player -->
+                <div class="video-container">
+                    <div class="video-placeholder" id="video-placeholder">
+                        Video
+                    </div>
+                    <video id="lesson-video" controls style="display: none;">
+                        <source src="{{ url_for('static', filename=video_url) }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <!-- Lesson Content -->
+                <div class="lesson-content">
+                    <h2 class="lesson-title">Lesson 2: Data Structures in Python</h2>
+
+                    <div class="lesson-description">
+                        <p>This lesson covers the fundamental data structures in Python that are essential for data
+                            science work. You'll learn about lists, dictionaries, sets, and tuples, and understand when
+                            to use each one for efficient data manipulation.</p>
+
+                        <p>By the end of this lesson, you'll be able to:</p>
+                        <ul>
+                            <li>Create and manipulate different Python data structures</li>
+                            <li>Choose the appropriate data structure for various scenarios</li>
+                            <li>Implement common operations and methods for each data structure</li>
+                            <li>Understand time complexity considerations for different operations</li>
+                            <li><a href="{{ url_for('course_page', course='data_science', module='module1', lesson='lesson1') }}" class="lesson-item " data-lesson="lesson1">Lesson 1: Introduction to Python</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="resources-section">
+                        <h3 class="resources-title">Resources</h3>
+                        <ul>
+                            <li><a href="#" target="_blank">Lesson slides (PDF)</a></li>
+                            <li><a href="#" target="_blank">Practice exercises</a></li>
+                            <li><a href="#" target="_blank">Further reading</a></li>
+                            <li><a href="#" target="_blank">Python documentation on data structures</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="next-steps">
+                        <h3 class="resources-title">Next Steps</h3>
+                        <p>After completing this lesson, you should move on to Lesson 3: Functions and Modules to
+                            continue your learning journey. Make sure to complete the practice exercises to reinforce
+                            your understanding of Python data structures.</p>
+                    </div>
+
+                    <div class="p-4 bg-muted rounded mb-4">
+                        <h4 class="font-medium mb-2">Need Help?</h4>
+                        <p class="text-muted mb-2">If you're having trouble understanding any concepts in this lesson,
+                            you can:</p>
+                        <ul class="text-muted mb-4">
+                            <li>Post your question in the course forum</li>
+                            <li>Join the weekly office hours</li>
+                            <li>Schedule a 1:1 session with a teaching assistant</li>
+                        </ul>
+                        <button class="btn btn-primary">Ask a Question</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='course-page.js') }}"></script>
+</body>
+
+</html>

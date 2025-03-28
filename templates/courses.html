@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - TechSkills</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="https://via.placeholder.com/40" alt="TechSkills Logo">
+                    <span>TechSkills</span>
+                </div>
+                <nav class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="{{ url_for('courses') }}">Courses</a></li>
+                        <li><a href="{{ url_for('index') }}#features">Features</a></li>
+                        <li><a href="{{ url_for('index') }}#testimonials">Testimonials</a></li>
+                        <li><a href="{{ url_for('index') }}#pricing">Pricing</a></li>
+                        <li><a href="{{ url_for('about') }}">About</a></li>
+                    </ul>
+                </nav>
+                <div class="header-buttons">
+                    <a href="#" class="btn-secondary">Login</a>
+                    <a href="#" class="btn-secondary">Sign Up</a>
+                    <a href="#" class="btn-primary">Get Started</a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Courses Section -->
+        <section class="courses-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge">Courses</div>
+                    <h2>Explore Our Courses</h2>
+                    <p>Choose from a variety of courses designed to help you succeed in your tech career.</p>
+                    <!-- ... existing code ... -->
+                    <div class="courses-grid">
+                        <div class="course-card">
+                            <h3>Web Development Bootcamp</h3>
+                            <p>Learn to build responsive websites and web applications using HTML, CSS, and JavaScript.</p>
+                            <a href="{{ url_for('course', course='web_development') }}" class="btn btn-primary">Enroll Now</a>
+                        </div>
+                        <div class="course-card">
+                            <h3>Data Science Bootcamp</h3>
+                            <p>Master data analysis, visualization, and machine learning with hands-on projects.</p>
+                            <a href="{{ url_for('course', course='data_science') }}" class="btn btn-primary">Enroll Now</a>
+                        </div>
+                        <div class="course-card">
+                            <h3>UX/UI Design Course</h3>
+                            <p>Learn the principles of user experience and user interface design to create engaging products.</p>
+                            <a href="{{ url_for('course', course='ux_ui_design') }}" class="btn btn-primary">Enroll Now</a>
+                        </div>
+                        <div class="course-card">
+                            <h3>Digital Marketing Course</h3>
+                            <p>Understand the fundamentals of digital marketing and how to create effective campaigns.</p>
+                            <a href="{{ url_for('course', course='digital_marketing') }}" class="btn btn-primary">Enroll Now</a>
+                        </div>
+                    </div>
+                    <!-- ... existing code ... -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="https://via.placeholder.com/40" alt="TechSkills Logo">
+                        <span>TechSkills</span>
+                    </div>
+                    <p>Empowering the next generation of tech professionals with job-ready skills and career support.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Platform</h3>
+                    <ul>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Learning Paths</a></li>
+                        <li><a href="#">Career Services</a></li>
+                        <li><a href="#">For Employers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 TechSkills. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

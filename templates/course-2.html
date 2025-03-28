@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master Web Development in 12 Weeks | Online Course</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='courseLP.css') }}">
+</head>
+<body>
+  <div class="page-layout">
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <h1>Master Web Development in 12 Weeks {video_url} </h1>
+        <p>
+          Launch your tech career with our full-stack web development course. Learn modern technologies, 
+          build professional projects, and become job-ready.
+        </p>
+        <div class="header-buttons">
+            <a href="{{ url_for('course_page', course='web_development', module='module1', lesson='lesson1') }}" class="btn btn-secondary">Enroll Now</a>
+            <a href="#" class="btn btn-outline">Download Syllabus</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="content-wrapper">
+      <!-- Sidebar Navigation -->
+      <aside class="sidebar">
+        <div class="sidebar-nav">
+          <h2>Course Navigation</h2>
+          <nav>
+            <!-- ... (same navigation structure) ... -->
+          </nav>
+
+          <div class="sidebar-cta">
+            <h3 class="font-medium mb-2">Ready to start?</h3>
+            <p class="text-sm text-muted mb-4">Enroll now and begin your journey to becoming a web developer.</p>
+            <a href="{{ url_for('course_page', course='web_development', module='module1', lesson='lesson1') }}" class="btn btn-secondary">Enroll Now</a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ... (same mobile menu structure) ... -->
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <div class="content-container">
+          <!-- Video Section -->
+          <section id="video" class="video-container">
+            <img src="{{ url_for('static', filename='mwd.webp') }}" alt="Web Development Course Image" class="course-image">
+            <div class="video-overlay">
+                <a href="{{ url_for('course_page', course='web_development', module='module1', lesson='lesson1') }}" class="btn btn-secondary">Enroll Now</a>
+            </div>
+          </section>
+
+          <!-- Tabs -->
+          <section class="tabs">
+            <div class="tabs-list">
+              <!-- ... (same tab triggers) ... -->
+            </div>
+
+            <!-- Overview Tab -->
+            <div id="overview" class="tab-content active">
+              <h2 class="text-2xl font-bold mb-4">Course Overview</h2>
+              <p class="text-muted mb-6">
+                Our 12-week Web Development bootcamp transforms beginners into full-stack developers. 
+                Learn frontend and backend technologies while building portfolio-worthy projects.
+              </p>
+              
+              <div class="stats-grid">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="card-title">12 Weeks</div>
+                    <div class="card-description">Intensive Program</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <div class="card-title">20 Projects</div>
+                    <div class="card-description">Real-world Apps</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <div class="card-title">1:1 Code Reviews</div>
+                    <div class="card-description">Expert Feedback</div>
+                  </div>
+                </div>
+              </div>
+              
+              <h3 class="text-xl font-bold mb-4">Key Technologies</h3>
+              <div class="topics-grid">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="card-title">HTML5 & CSS3</div>
+                  </div>
+                  <div class="card-content">
+                    <p class="text-sm text-muted">Master modern semantic HTML and advanced CSS techniques including Flexbox and Grid.</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <div class="card-title">JavaScript ES6+</div>
+                  </div>
+                  <div class="card-content">
+                    <p class="text-sm text-muted">Learn core JS concepts, DOM manipulation, and modern ES6+ features.</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <div class="card-title">React.js</div>
+                  </div>
+                  <div class="card-content">
+                    <p class="text-sm text-muted">Build interactive UIs with React components, hooks, and state management.</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <div class="card-title">Node.js</div>
+                  </div>
+                  <div class="card-content">
+                    <p class="text-sm text-muted">Develop RESTful APIs and server-side applications with Express.js.</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <div class="card-title">Databases</div>
+                  </div>
+                  <div class="card-content">
+                    <p class="text-sm text-muted">Work with MongoDB and SQL databases for full-stack applications.</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <div class="card-title">DevOps</div>
+                  </div>
+                  <div class="card-content">
+                    <p class="text-sm text-muted">Deploy applications with Docker, AWS, and CI/CD pipelines.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <h3 class="text-xl font-bold mb-4">Learning Outcomes</h3>
+              <ul class="outcome-list">
+                <li class="outcome-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Build responsive websites and web applications</span>
+                </li>
+                <li class="outcome-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Develop full-stack applications with MERN stack</span>
+                </li>
+                <li class="outcome-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Implement RESTful APIs and authentication systems</span>
+                </li>
+                <li class="outcome-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Optimize web performance and accessibility</span>
+                </li>
+                <li class="outcome-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Deploy and maintain production-grade applications</span>
+                </li>
+                <li class="outcome-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Collaborate using Git and agile methodologies</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Curriculum Tab -->
+            <div id="curriculum" class="tab-content">
+              <h2 class="text-2xl font-bold mb-4">Course Curriculum</h2>
+              <p class="text-muted mb-6">
+                Our project-based curriculum covers both frontend and backend development, 
+                preparing you for modern web development roles.
+              </p>
+              
+              <div class="progress-container">
+                <!-- ... (similar progress structure) ... -->
+              </div>
+              
+              <div class="accordion">
+                <div class="accordion-item">
+                  <button class="accordion-trigger" aria-expanded="false">
+                    <div>
+                      <span>Module 1: Frontend Foundations</span>
+                      <span class="badge badge-outline">2 weeks</span>
+                    </div>
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+                  <div class="accordion-content">
+                    <p class="text-muted mb-4">Master HTML5, CSS3, and responsive web design principles.</p>
+                    <h4 class="font-medium mb-2">Topics Covered:</h4>
+                    <ul class="list-disc pl-5 space-y-1 mb-4">
+                      <li class="text-sm">Semantic HTML markup</li>
+                      <li class="text-sm">CSS Flexbox and Grid</li>
+                      <li class="text-sm">Responsive design principles</li>
+                      <li class="text-sm">CSS preprocessors (SASS)</li>
+                    </ul>
+                    <h4 class="font-medium mb-2">Projects:</h4>
+                    <ul class="list-disc pl-5 space-y-1">
+                      <li class="text-sm">Responsive Portfolio Website</li>
+                      <li class="text-sm">E-commerce Product Page</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <button class="accordion-trigger" aria-expanded="false">
+                    <div>
+                      <span>Module 2: JavaScript Mastery</span>
+                      <span class="badge badge-outline">3 weeks</span>
+                    </div>
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+                  <div class="accordion-content">
+                    <!-- Similar structure for JavaScript content -->
+                  </div>
+                </div>
+
+                <!-- Additional modules for React, Node.js, Databases, etc. -->
+              </div>
+            </div>
+
+            <!-- Instructors Tab -->
+            <div id="instructors" class="tab-content">
+              <h2 class="text-2xl font-bold mb-4">Meet Your Instructors</h2>
+              <p class="text-muted mb-6">
+                Learn from industry professionals with extensive experience in web development 
+                and software engineering.
+              </p>
+              
+              <div class="instructor-card card">
+                <div class="instructor-image">
+                  <img src="https://via.placeholder.com/400x400" alt="Sarah Johnson">
+                </div>
+                <div class="instructor-content">
+                  <div class="card-header">
+                    <div class="card-title">Sarah Johnson</div>
+                    <div class="card-description">Lead Frontend Instructor</div>
+                  </div>
+                  <div class="card-content">
+                    <p class="text-sm text-muted">Former frontend lead at Google with 8+ years experience in React and modern JavaScript.</p>
+                    <div class="mt-4">
+                      <h4 class="text-sm font-medium mb-2">Expertise:</h4>
+                      <div>
+                        <span class="expertise-tag">React</span>
+                        <span class="expertise-tag">TypeScript</span>
+                        <span class="expertise-tag">Web Performance</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Additional instructors for backend, full-stack, etc. -->
+            </div>
+
+            <!-- Reviews Tab -->
+            <div id="reviews" class="tab-content">
+              <!-- Updated reviews with web development testimonials -->
+              <div class="review-card card">
+                <div class="card-content">
+                  <div class="stars">★★★★★</div>
+                  <p class="review-text">"This course gave me the skills to transition from marketing to web development. Landed my first frontend role 2 months after completing!"</p>
+                </div>
+                <div class="card-footer">
+                  <div class="reviewer-image">
+                    <img src="https://via.placeholder.com/100x100" alt="Alex Thompson">
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-sm">Alex Thompson</h4>
+                    <p class="text-xs text-muted">Frontend Developer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Tab -->
+            <div id="faq" class="tab-content">
+              <div class="faq-item">
+                <div class="faq-question">
+                  <span>Do I need a computer science degree?</span>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                  <p>No! Our students come from diverse backgrounds. We focus on practical skills employers need.</p>
+                </div>
+              </div>
+              <!-- More web dev specific FAQs -->
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3 class="footer-heading">Web Development Bootcamp</h3>
+            <p class="text-sm text-muted mb-4">
+              Become a full-stack web developer through our intensive project-based program.
+            </p>
+            <!-- Social links -->
+          </div>
+          <!-- Updated footer links -->
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; <script>document.write(new Date().getFullYear())</script> Web Development Bootcamp</p>
+          <p>Contact: <a href="mailto:hello@webdevbootcamp.com">hello@webdevbootcamp.com</a></p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="{{ url_for('static', filename='courseLP.js') }}"></script>
+</body>
+</html>

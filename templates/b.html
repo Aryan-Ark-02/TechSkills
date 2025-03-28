@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name - Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+<style>
+  /* Resetting some basic styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+
+  header {
+    background-color: #333;
+    padding: 10px;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin: 0 20px;
+  }
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    color: #ff6347;
+  }
+
+  .section {
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+  }
+
+  .project-card {
+    background: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .project-card h2 {
+    font-size: 1.8rem;
+    color: #333;
+  }
+
+  .project-card p {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  ul li {
+    margin: 10px 20px;
+    font-size: 1.2rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  form input,
+  form textarea {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  form button {
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  form button:hover {
+    background-color: #e53e3e;
+  }
+
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+  }
+
+  /* Smooth scrolling effect */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+    }
+
+    .project-card {
+      width: 80%;
+      margin: 20px auto;
+    }
+
+    form input, form textarea {
+      width: 80%;
+    }
+  }
+</style>
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#bio">Bio</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Bio Section -->
+  <section id="bio" class="section">
+    <h1>About Me</h1>
+    <p>Hello! I'm [Your Name], a passionate web developer. I specialize in creating interactive and user-friendly websites.</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h1>Projects</h1>
+    <div class="project-card">
+      <h2>Project 1</h2>
+      <p>A brief description of the project goes here.</p>
+    </div>
+    <div class="project-card">
+      <h2>Project 2</h2>
+      <p>A brief description of the project goes here.</p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <h1>Skills</h1>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h1>Contact Me</h1>
+    <form action="#" method="POST">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Your Name</p>
+  </footer>
+</body>
+</html>

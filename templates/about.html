@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - TechSkills</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="https://via.placeholder.com/40" alt="TechSkills Logo">
+                    <span>TechSkills</span>
+                </div>
+                <nav class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="{{ url_for('courses') }}">Courses</a></li>
+                        <li><a href="{{ url_for('index') }}#features">Features</a></li>
+                        <li><a href="{{ url_for('index') }}#testimonials">Testimonials</a></li>
+                        <li><a href="{{ url_for('index') }}#pricing">Pricing</a></li>
+                        <li><a href="{{ url_for('about') }}">About</a></li>
+                    </ul>
+                </nav>
+                <div class="header-buttons">
+                    <a href="#" class="btn-primary">Get Started</a>
+                    <a href="{{ url_for('logout') }}" class="btn-secondary">Logout</a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge">About Us</div>
+                    <h2>Who We Are</h2>
+                    <p>At TechSkills, we are dedicated to empowering the next generation of tech professionals with job-ready skills and career support.</p>
+                </div>
+                <div class="about-content">
+                    <h3>Our Mission</h3>
+                    <p>Our mission is to provide high-quality education and training that equips individuals with the skills they need to succeed in the tech industry.</p>
+                    <h3>Our Vision</h3>
+                    <p>We envision a world where everyone has access to the resources and support they need to thrive in their tech careers.</p>
+                    <h3>Our Values</h3>
+                    <ul>
+                        <li>Integrity: We uphold the highest standards of integrity in all our actions.</li>
+                        <li>Innovation: We foster a culture of innovation and creativity.</li>
+                        <li>Excellence: We strive for excellence in everything we do.</li>
+                        <li>Community: We believe in the power of community and collaboration.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="https://via.placeholder.com/40" alt="TechSkills Logo">
+                        <span>TechSkills</span>
+                    </div>
+                    <p>Empowering the next generation of tech professionals with job-ready skills and career support.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Platform</h3>
+                    <ul>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Learning Paths</a></li>
+                        <li><a href="#">Career Services</a></li>
+                        <li><a href="#">For Employers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 TechSkills. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

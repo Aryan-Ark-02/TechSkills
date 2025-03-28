@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSkills - Launch Your Tech Career</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="{{ url_for('static', filename='l.png') }}" alt="TechSkills Logo">
+                    <span>TechSkills</span>
+                </div>
+                <nav class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="{{ url_for('courses') }}">Courses</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="{{ url_for('about') }}">About</a></li>
+                    </ul>
+                </nav>
+                <div class="header-buttons">
+                    <a href="#" class="btn-primary">Get Started</a>
+                    <a href="{{ url_for('logout') }}">Logout</a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul class="mobile-nav-list">
+            <li><a href="{{ url_for('courses') }}">Courses</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="#" class="mobile-btn-primary">Get Started</a></li>
+            <li><a href="{{ url_for('logout') }}" class="mobile-btn">Logout</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <div class="badge">Job-Ready Skills</div>
+                        <h1>Launch Your Tech Career</h1>
+                        <p>Master in-demand tech skills with hands-on projects, expert instructors, and personalized career support. Start your journey to a rewarding tech career today.</p>
+                        <div class="hero-buttons">
+                            <a href="#courses" class="btn-primary">Explore Courses</a>
+                            <a href="{{ url_for('signup') }}" class="btn-outline">Sign Up Now</a>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <i class="fas fa-users"></i>
+                                <span>10,000+ Students</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-book-open"></i>
+                                <span>50+ Courses</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>85% Job Placement</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="{{ url_for('static', filename='im1.webp') }}" alt="Students learning tech skills">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge">Features</div>
+                    <h2>Why Choose TechSkills</h2>
+                    <p>Our platform is designed to help you acquire job-ready skills and launch your tech career.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Hands-on Projects</h3>
+                        <p>Build real-world projects that demonstrate your skills to potential employers.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Industry-Relevant Curriculum</h3>
+                        <p>Learn the latest technologies and frameworks used by top tech companies.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3>Expert Instructors</h3>
+                        <p>Learn from industry professionals with years of experience in their fields.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>1-on-1 Mentorship</h3>
+                        <p>Get personalized guidance and feedback from experienced mentors.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>Career Support</h3>
+                        <p>Resume reviews, interview prep, and job placement assistance to help you land your dream job.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Flexible Learning</h3>
+                        <p>Learn at your own pace with on-demand courses and flexible scheduling options.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge">Testimonials</div>
+                    <h2>Success Stories</h2>
+                    <p>Hear from our graduates who have successfully transitioned into rewarding tech careers.</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"TechSkills transformed my career. I went from a retail job to a six-figure developer role in just 6 months. The hands-on projects and career support made all the difference."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="{{ url_for('static', filename='p1.webp') }}" alt="Alex Johnson">
+                            <div class="author-info">
+                                <h4>Alex Johnson</h4>
+                                <p>Frontend Developer at TechCorp</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"The data science bootcamp was intense but incredibly rewarding. The instructors were knowledgeable and supportive, and the career services team helped me land multiple job offers."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="{{ url_for('static', filename='p2.webp') }}" alt="Priya Sharma">
+                            <div class="author-info">
+                                <h4>Priya Sharma</h4>
+                                <p>Data Scientist at AnalyticsPro</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"I tried learning to code on my own for years with limited success. TechSkills provided the structure, support, and accountability I needed to finally make the career change I wanted."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="{{ url_for('static', filename='p1.webp') }}" alt="Marcus Williams">
+                            <div class="author-info">
+                                <h4>Marcus Williams</h4>
+                                <p>Full Stack Developer at StartupX</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge">Pricing</div>
+                    <h2>Flexible Learning Plans</h2>
+                    <p>Choose the plan that fits your learning goals and budget.</p>
+                </div>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Self-Paced</h3>
+                            <div class="price">
+                                <span class="amount">$49</span>
+                                <span class="period">/month</span>
+                            </div>
+                            <p>Learn at your own pace with access to our course library</p>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Access to 50+ courses</li>
+                                <li><i class="fas fa-check"></i> Hands-on projects</li>
+                                <li><i class="fas fa-check"></i> Community forum access</li>
+                                <li><i class="fas fa-check"></i> Course completion certificates</li>
+                                <li><i class="fas fa-check"></i> 24/7 support</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="#" class="btn-outline btn-full">Choose Plan</a>
+                        </div>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge">Most Popular</div>
+                        <div class="pricing-header">
+                            <h3>Bootcamp</h3>
+                            <div class="price">
+                                <span class="amount">$999</span>
+                                <span class="period">/course</span>
+                            </div>
+                            <p>Intensive, structured learning with career support</p>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> 12-week intensive program</li>
+                                <li><i class="fas fa-check"></i> Live instructor-led sessions</li>
+                                <li><i class="fas fa-check"></i> 1-on-1 mentorship</li>
+                                <li><i class="fas fa-check"></i> Career coaching</li>
+                                <li><i class="fas fa-check"></i> Job placement assistance</li>
+                                <li><i class="fas fa-check"></i> Industry networking events</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="#" class="btn-primary btn-full">Choose Plan</a>
+                        </div>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Enterprise</h3>
+                            <div class="price">
+                                <span class="amount">$199</span>
+                                <span class="period">/user/month</span>
+                            </div>
+                            <p>Custom training solutions for teams and organizations</p>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Custom learning paths</li>
+                                <li><i class="fas fa-check"></i> Dedicated account manager</li>
+                                <li><i class="fas fa-check"></i> Team progress tracking</li>
+                                <li><i class="fas fa-check"></i> Custom project assignments</li>
+                                <li><i class="fas fa-check"></i> Private group sessions</li>
+                                <li><i class="fas fa-check"></i> Branded certificates</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="#" class="btn-outline btn-full">Choose Plan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Start Your Tech Journey?</h2>
+                    <p>Join thousands of students who have successfully launched their tech careers with TechSkills.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn-primary">Enroll Now</a>
+                        <a href="#" class="btn-outline btn-light">Schedule a Demo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="https://via.placeholder.com/40" alt="TechSkills Logo">
+                        <span>TechSkills</span>
+                    </div>
+                    <p>Empowering the next generation of tech professionals with job-ready skills and career support.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Platform</h3>
+                    <ul>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Learning Paths</a></li>
+                        <li><a href="#">Career Services</a></li>
+                        <li><a href="#">For Employers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 TechSkills. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

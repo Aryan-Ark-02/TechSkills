@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master Data Science in 12 Weeks | Online Course</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='courseLP.css') }}">
+</head>
+<body>
+  <div class="page-layout">
+    <!-- Header add jinja teemplating to make it copatible with flask -->
+    <header class="header">
+      <div class="container">
+        <h1>Master Data Science in 12 Weeks </h1>
+        <p>
+          Transform your career with our comprehensive data science course. Learn from industry experts, 
+          build real-world projects, and gain the skills employers are looking for.
+        </p>
+        <div class="header-buttons">
+          <a href="{{ url_for('course_page', course='data_science', module='module1', lesson='lesson1') }}" class="btn btn-secondary">Enroll Now</a>
+          <a href="#" class="btn btn-outline">Download Syllabus</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="content-wrapper">
+      <!-- Sidebar Navigation -->
+      <aside class="sidebar">
+        <div class="sidebar-nav">
+          <h2>Course Navigation</h2>
+          <nav>
+            <div class="nav-item active" data-section="overview">
+              <i class="fas fa-th-large"></i>
+              <span>Overview</span>
+            </div>
+            <div class="nav-item" data-section="curriculum">
+              <i class="fas fa-book-open"></i>
+              <span>Curriculum</span>
+            </div>
+            <div class="nav-item" data-section="instructors">
+              <i class="fas fa-users"></i>
+              <span>Instructors</span>
+            </div>
+            <div class="nav-item" data-section="reviews">
+              <i class="fas fa-comment"></i>
+              <span>Reviews</span>
+            </div>
+            <div class="nav-item" data-section="faq">
+              <i class="fas fa-question-circle"></i>
+              <span>FAQ</span>
+            </div>
+          </nav>
+
+          <div class="sidebar-cta">
+            <h3 class="font-medium mb-2">Ready to start?</h3>
+            <p class="text-sm text-muted mb-4">Enroll now and begin your journey to becoming a data scientist.</p>
+            <a href="{{ url_for('course_page', course='data_science', module='module1', lesson='lesson1') }}" class="btn btn-secondary">Enroll Now</a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-button" aria-label="Open navigation menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu">
+        <nav>
+          <div class="nav-item active" data-section="overview">
+            <i class="fas fa-th-large"></i>
+            <span>Overview</span>
+          </div>
+          <div class="nav-item" data-section="curriculum">
+            <i class="fas fa-book-open"></i>
+            <span>Curriculum</span>
+          </div>
+          <div class="nav-item" data-section="instructors">
+            <i class="fas fa-users"></i>
+            <span>Instructors</span>
+          </div>
+          <div class="nav-item" data-section="reviews">
+            <i class="fas fa-comment"></i>
+            <span>Reviews</span>
+          </div>
+          <div class="nav-item" data-section="faq">
+            <i class="fas fa-question-circle"></i>
+            <span>FAQ</span>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <div class="content-container">
+          <!-- Video Section -->
+          <section id="video" class="video-container">
+            <!--  1280x720 -->
+            <img src="{{ url_for('static', filename='mds.webp') }}" alt="Data Science Course Image" class="course-image">
+            <div class="video-overlay">
+              <a href="{{ url_for('course_page', course='data_science', module='module1', lesson='lesson1') }}" class="btn btn-secondary">Enroll Now</a>
+            </div>
+          </section>
+
+          <!-- Tabs -->
+          <section class="tabs">
+            <div class="tabs-list">
+              <div class="tab-trigger active" data-tab="overview">Overview</div>
+              <div class="tab-trigger" data-tab="curriculum">Curriculum</div>
+              <div class="tab-trigger" data-tab="instructors">Instructors</div>
+              <div class="tab-trigger" data-tab="reviews">Reviews</div>
+              <div class="tab-trigger" data-tab="faq">FAQ</div>
+            </div>
+
+            <!-- Overview Tab -->
+            <div id="overview" class="tab-content active">
+              <h2 class="text-2xl font-bold mb-4">Course Overview</h2>
+              <p class="text-muted mb-6">
+                Our 12-week Data Science bootcamp is designed to take you from beginner to job-ready. 
+                With a focus on practical skills and real-world applications, you'll learn everything 
+                you need to launch your career in data science.
+              </p>
+              
+              <div class="stats-grid">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="card-title">12 Weeks</div>
+                    <div class="card-description">Course Duration</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <div class="card-title">24 Projects</div>
+                    <div class="card-description">Hands-on Learning</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <div class="card-title">1:1 Mentoring</div>
+                    <div class="card-description">Personalized Support</div>
+                  </div>
+                </div>
+              </div>
+              
+              <h3 class="text-xl font-bold mb-4">Key Topics Covered</h3>
+              <div class="topics-grid">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="card-title">Python Programming</div>
+                  </div>
+                  <div class="card-content">
+                    <p class="text-sm text-muted">Learn Python from the ground up, focusing on data science libraries like NumPy, Pandas, and Matplotlib.</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <div class="card-title">Statistical Analysis</div>
+                  </div>
+                  <div class="card-content">
+                    <p class="text-sm text-muted">Master statistical concepts essential for data analysis, including hypothesis testing and regression analysis.</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <div class="card-title">Machine Learning</div>
+                  </div>
+                  <div class="card-content">
+                    <p class="text-sm text-muted">Build predictive models using supervised and unsupervised learning algorithms.</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <div class="card-title">Deep Learning</div>
+                  </div>
+                  <div class="card-content">
+                    <p class="text-sm text-muted">Explore neural networks and implement deep learning models for complex problems.</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <div class="card-title">Data Visualization</div>
+                  </div>
+                  <div class="card-content">
+                    <p class="text-sm text-muted">Create compelling visualizations to communicate insights effectively.</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <div class="card-title">Big Data Technologies</div>
+                  </div>
+                  <div class="card-content">
+                    <p class="text-sm text-muted">Work with big data tools like Spark to analyze large-scale datasets.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <h3 class="text-xl font-bold mb-4">Learning Outcomes</h3>
+              <ul class="outcome-list">
+                <li class="outcome-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Master Python for data analysis and machine learning</span>
+                </li>
+                <li class="outcome-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Build and deploy machine learning models</span>
+                </li>
+                <li class="outcome-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Perform advanced data visualization and storytelling</span>
+                </li>
+                <li class="outcome-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Work with real-world datasets to solve business problems</span>
+                </li>
+                <li class="outcome-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Develop a portfolio of data science projects</span>
+                </li>
+                <li class="outcome-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Prepare for data science job interviews</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Curriculum Tab -->
+            <div id="curriculum" class="tab-content">
+              <h2 class="text-2xl font-bold mb-4">Course Curriculum</h2>
+              <p class="text-muted mb-6">
+                Our comprehensive curriculum is designed to take you from the fundamentals to advanced 
+                concepts in data science. Each module builds upon the previous one, ensuring a smooth 
+                learning progression.
+              </p>
+              
+              <div class="progress-container">
+                <div class="flex justify-between mb-2 text-sm">
+                  <span>Course Progress</span>
+                  <span>12 Weeks</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-bar-fill"></div>
+                </div>
+                <div class="progress-markers">
+                  <div class="progress-marker">M1</div>
+                  <div class="progress-marker">M2</div>
+                  <div class="progress-marker">M3</div>
+                  <div class="progress-marker">M4</div>
+                  <div class="progress-marker">M5</div>
+                  <div class="progress-marker">M6</div>
+                </div>
+              </div>
+              
+              <div class="accordion">
+                <div class="accordion-item">
+                  <button class="accordion-trigger" aria-expanded="false">
+                    <div>
+                      <span>Module 1: Python Fundamentals for Data Science</span>
+                      <span class="badge badge-outline">2 weeks</span>
+                    </div>
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+                  <div class="accordion-content">
+                    <p class="text-muted mb-4">Build a strong foundation in Python programming with a focus on data science applications.</p>
+                    
+                    <h4 class="font-medium mb-2">Topics Covered:</h4>
+                    <ul class="list-disc pl-5 space-y-1 mb-4">
+                      <li class="text-sm">Python syntax and data structures</li>
+                      <li class="text-sm">NumPy for numerical computing</li>
+                      <li class="text-sm">Pandas for data manipulation</li>
+                      <li class="text-sm">Data cleaning and preprocessing</li>
+                    </ul>
+                    
+                    <h4 class="font-medium mb-2">Skills You'll Gain:</h4>
+                    <div class="skills-list">
+                      <span class="badge badge-secondary">Python</span>
+                      <span class="badge badge-secondary">NumPy</span>
+                      <span class="badge badge-secondary">Pandas</span>
+                      <span class="badge badge-secondary">Data Cleaning</span>
+                    </div>
+                    
+                    <h4 class="font-medium mb-2">Projects:</h4>
+                    <ul class="list-disc pl-5 space-y-1">
+                      <li class="text-sm">Exploratory Data Analysis of Real-world Dataset</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div class="accordion-item">
+                  <button class="accordion-trigger" aria-expanded="false">
+                    <div>
+                      <span>Module 2: Statistical Analysis and Visualization</span>
+                      <span class="badge badge-outline">2 weeks</span>
+                    </div>
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+                  <div class="accordion-content">
+                    <p class="text-muted mb-4">Master statistical concepts and data visualization techniques essential for data analysis.</p>
+                    
+                    <h4 class="font-medium mb-2">Topics Covered:</h4>
+                    <ul class="list-disc pl-5 space-y-1 mb-4">
+                      <li class="text-sm">Descriptive and inferential statistics</li>
+                      <li class="text-sm">Hypothesis testing</li>
+                      <li class="text-sm">Data visualization with Matplotlib and Seaborn</li>
+                      <li class="text-sm">Storytelling with data</li>
+                    </ul>
+                    
+                    <h4 class="font-medium mb-2">Skills You'll Gain:</h4>
+                    <div class="skills-list">
+                      <span class="badge badge-secondary">Statistics</span>
+                      <span class="badge badge-secondary">Matplotlib</span>
+                      <span class="badge badge-secondary">Seaborn</span>
+                      <span class="badge badge-secondary">Data Visualization</span>
+                    </div>
+                    
+                    <h4 class="font-medium mb-2">Projects:</h4>
+                    <ul class="list-disc pl-5 space-y-1">
+                      <li class="text-sm">Statistical Analysis Report</li>
+                      <li class="text-sm">Interactive Dashboard</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div class="accordion-item">
+                  <button class="accordion-trigger" aria-expanded="false">
+                    <div>
+                      <span>Module 3: Machine Learning Fundamentals</span>
+                      <span class="badge badge-outline">3 weeks</span>
+                    </div>
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+                  <div class="accordion-content">
+                    <p class="text-muted mb-4">Learn the core concepts of machine learning and implement supervised learning algorithms.</p>
+                    
+                    <h4 class="font-medium mb-2">Topics Covered:</h4>
+                    <ul class="list-disc pl-5 space-y-1 mb-4">
+                      <li class="text-sm">Introduction to machine learning</li>
+                      <li class="text-sm">Supervised learning algorithms</li>
+                      <li class="text-sm">Model evaluation and validation</li>
+                      <li class="text-sm">Feature engineering</li>
+                    </ul>
+                    
+                    <h4 class="font-medium mb-2">Skills You'll Gain:</h4>
+                    <div class="skills-list">
+                      <span class="badge badge-secondary">Scikit-learn</span>
+                      <span class="badge badge-secondary">Supervised Learning</span>
+                      <span class="badge badge-secondary">Model Evaluation</span>
+                      <span class="badge badge-secondary">Feature Engineering</span>
+                    </div>
+                    
+                    <h4 class="font-medium mb-2">Projects:</h4>
+                    <ul class="list-disc pl-5 space-y-1">
+                      <li class="text-sm">Predictive Model for Customer Churn</li>
+                      <li class="text-sm">Housing Price Prediction</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div class="accordion-item">
+                  <button class="accordion-trigger" aria-expanded="false">
+                    <div>
+                      <span>Module 4: Advanced Machine Learning</span>
+                      <span class="badge badge-outline">2 weeks</span>
+                    </div>
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+                  <div class="accordion-content">
+                    <p class="text-muted mb-4">Explore advanced machine learning techniques and unsupervised learning algorithms.</p>
+                    
+                    <h4 class="font-medium mb-2">Topics Covered:</h4>
+                    <ul class="list-disc pl-5 space-y-1 mb-4">
+                      <li class="text-sm">Unsupervised learning algorithms</li>
+                      <li class="text-sm">Dimensionality reduction</li>
+                      <li class="text-sm">Ensemble methods</li>
+                      <li class="text-sm">Time series analysis</li>
+                    </ul>
+                    
+                    <h4 class="font-medium mb-2">Skills You'll Gain:</h4>
+                    <div class="skills-list">
+                      <span class="badge badge-secondary">Clustering</span>
+                      <span class="badge badge-secondary">PCA</span>
+                      <span class="badge badge-secondary">Ensemble Methods</span>
+                      <span class="badge badge-secondary">Time Series</span>
+                    </div>
+                    
+                    <h4 class="font-medium mb-2">Projects:</h4>
+                    <ul class="list-disc pl-5 space-y-1">
+                      <li class="text-sm">Customer Segmentation</li>
+                      <li class="text-sm">Stock Price Prediction</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div class="accordion-item">
+                  <button class="accordion-trigger" aria-expanded="false">
+                    <div>
+                      <span>Module 5: Deep Learning</span>
+                      <span class="badge badge-outline">2 weeks</span>
+                    </div>
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+                  <div class="accordion-content">
+                    <p class="text-muted mb-4">Dive into neural networks and implement deep learning models for complex problems.</p>
+                    
+                    <h4 class="font-medium mb-2">Topics Covered:</h4>
+                    <ul class="list-disc pl-5 space-y-1 mb-4">
+                      <li class="text-sm">Neural networks fundamentals</li>
+                      <li class="text-sm">TensorFlow and Keras</li>
+                      <li class="text-sm">Convolutional neural networks</li>
+                      <li class="text-sm">Recurrent neural networks</li>
+                    </ul>
+                    
+                    <h4 class="font-medium mb-2">Skills You'll Gain:</h4>
+                    <div class="skills-list">
+                      <span class="badge badge-secondary">TensorFlow</span>
+                      <span class="badge badge-secondary">Keras</span>
+                      <span class="badge badge-secondary">CNN</span>
+                      <span class="badge badge-secondary">RNN</span>
+                    </div>
+                    
+                    <h4 class="font-medium mb-2">Projects:</h4>
+                    <ul class="list-disc pl-5 space-y-1">
+                      <li class="text-sm">Image Classification</li>
+                      <li class="text-sm">Natural Language Processing</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div class="accordion-item">
+                  <button class="accordion-trigger" aria-expanded="false">
+                    <div>
+                      <span>Module 6: Capstone Project</span>
+                      <span class="badge badge-outline">1 week</span>
+                    </div>
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+                  <div class="accordion-content">
+                    <p class="text-muted mb-4">Apply all the skills you've learned to a real-world data science project.</p>
+                    
+                    <h4 class="font-medium mb-2">Topics Covered:</h4>
+                    <ul class="list-disc pl-5 space-y-1 mb-4">
+                      <li class="text-sm">Project planning and scoping</li>
+                      <li class="text-sm">Data collection and preprocessing</li>
+                      <li class="text-sm">Model development and evaluation</li>
+                      <li class="text-sm">Presentation of results</li>
+                    </ul>
+                    
+                    <h4 class="font-medium mb-2">Skills You'll Gain:</h4>
+                    <div class="skills-list">
+                      <span class="badge badge-secondary">Project Management</span>
+                      <span class="badge badge-secondary">End-to-end Implementation</span>
+                      <span class="badge badge-secondary">Communication</span>
+                    </div>
+                    
+                    <h4 class="font-medium mb-2">Projects:</h4>
+                    <ul class="list-disc pl-5 space-y-1">
+                      <li class="text-sm">End-to-end Data Science Project</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Instructors Tab -->
+            <div id="instructors" class="tab-content">
+              <h2 class="text-2xl font-bold mb-4">Meet Your Instructors</h2>
+              <p class="text-muted mb-6">
+                Learn from industry experts with years of experience in data science and machine learning. 
+                Our instructors have worked at top tech companies and are passionate about teaching.
+              </p>
+              
+              <div class="instructor-card card">
+                <div class="instructor-image">
+                  <img src="{{ url_for('static', filename='f3.webp') }}" alt="Dr. Sarah Johnson">
+                </div>
+                <div class="instructor-content">
+                  <div class="card-header">
+                    <div class="card-title">Dr. Sarah Johnson</div>
+                    <div class="card-description">Lead Instructor, Data Science</div>
+                  </div>
+                  <div class="card-content">
+                    <p class="text-sm text-muted">Dr. Johnson has over 10 years of experience in data science and machine learning. She previously worked as a Senior Data Scientist at Google and has published numerous papers on machine learning algorithms.</p>
+                    <div class="mt-4">
+                      <h4 class="text-sm font-medium mb-2">Areas of Expertise:</h4>
+                      <div>
+                        <span class="expertise-tag">Machine Learning</span>
+                        <span class="expertise-tag">Deep Learning</span>
+                        <span class="expertise-tag">Python</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="instructor-social">
+                      <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                      </a>
+                      <a href="#" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                      </a>
+                      <a href="#" class="social-icon" aria-label="Website">
+                        <i class="fas fa-globe"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="instructor-card card">
+                <div class="instructor-image">
+                  <img src="{{ url_for('static', filename='f1.webp') }}" alt="Michael Chen">
+                </div>
+                <div class="instructor-content">
+                  <div class="card-header">
+                    <div class="card-title">Michael Chen</div>
+                    <div class="card-description">Senior Instructor, Machine Learning</div>
+                  </div>
+                  <div class="card-content">
+                    <p class="text-sm text-muted">Michael is a machine learning expert with experience at Amazon and Microsoft. He specializes in natural language processing and has built several production-level ML systems.</p>
+                    <div class="mt-4">
+                      <h4 class="text-sm font-medium mb-2">Areas of Expertise:</h4>
+                      <div>
+                        <span class="expertise-tag">NLP</span>
+                        <span class="expertise-tag">Production ML</span>
+                        <span class="expertise-tag">TensorFlow</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="instructor-social">
+                      <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                      </a>
+                      <a href="#" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                      </a>
+                      <a href="#" class="social-icon" aria-label="Website">
+                        <i class="fas fa-globe"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="instructor-card card">
+                <div class="instructor-image">
+                  <img src="{{ url_for('static', filename='f4.webp') }}" alt="Dr. Emily Rodriguez">
+                </div>
+                <div class="instructor-content">
+                  <div class="card-header">
+                    <div class="card-title">Dr. Emily Rodriguez</div>
+                    <div class="card-description">Instructor, Statistics & Data Visualization</div>
+                  </div>
+                  <div class="card-content">
+                    <p class="text-sm text-muted">Dr. Rodriguez holds a PhD in Statistics and has worked as a Data Visualization Specialist at Netflix. She is passionate about making complex data accessible through effective visualization.</p>
+                    <div class="mt-4">
+                      <h4 class="text-sm font-medium mb-2">Areas of Expertise:</h4>
+                      <div>
+                        <span class="expertise-tag">Statistics</span>
+                        <span class="expertise-tag">Data Visualization</span>
+                        <span class="expertise-tag">R & Python</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="instructor-social">
+                      <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                      </a>
+                      <a href="#" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                      </a>
+                      <a href="#" class="social-icon" aria-label="Website">
+                        <i class="fas fa-globe"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="instructor-card card">
+                <div class="instructor-image">
+                  <img src="{{ url_for('static', filename='f2.webp') }}"" alt="James Wilson">
+                </div>
+                <div class="instructor-content">
+                  <div class="card-header">
+                    <div class="card-title">James Wilson</div>
+                    <div class="card-description">Industry Mentor, Big Data</div>
+                  </div>
+                  <div class="card-content">
+                    <p class="text-sm text-muted">James has 15+ years of experience working with big data technologies. He currently leads the data engineering team at a Fortune 500 company and advises several tech startups.</p>
+                    <div class="mt-4">
+                      <h4 class="text-sm font-medium mb-2">Areas of Expertise:</h4>
+                      <div>
+                        <span class="expertise-tag">Big Data</span>
+                        <span class="expertise-tag">Spark</span>
+                        <span class="expertise-tag">Data Engineering</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="instructor-social">
+                      <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                      </a>
+                      <a href="#" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                      </a>
+                      <a href="#" class="social-icon" aria-label="Website">
+                        <i class="fas fa-globe"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Reviews Tab -->
+            <div id="reviews" class="tab-content">
+              <h2 class="text-2xl font-bold mb-4">Student Reviews</h2>
+              <p class="text-muted mb-6">
+                Hear from our graduates about their experience with the course and how it has 
+                helped them advance their careers in data science.
+              </p>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="review-card card">
+                  <div class="card-content">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"This course completely transformed my career. I went from being a marketing analyst to a data scientist in just 3 months after completing the program. The curriculum is comprehensive and the instructors are incredibly knowledgeable and supportive."</p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="reviewer-image">
+                      <img src="https://via.placeholder.com/100x100" alt="Alex Thompson">
+                    </div>
+                    <div>
+                      <h4 class="font-medium text-sm">Alex Thompson</h4>
+                      <p class="text-xs text-muted">Data Analyst at Spotify</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="review-card card">
+                  <div class="card-content">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"As someone with a background in software engineering, I was looking to specialize in machine learning. This course provided the perfect balance of theory and practical applications. The projects were challenging and relevant to real-world problems."</p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="reviewer-image">
+                      <img src="https://via.placeholder.com/100x100" alt="Priya Patel">
+                    </div>
+                    <div>
+                      <h4 class="font-medium text-sm">Priya Patel</h4>
+                      <p class="text-xs text-muted">Machine Learning Engineer</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="review-card card">
+                  <div class="card-content">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                    <p class="review-text">"The course content is excellent and up-to-date with the latest industry trends. I particularly appreciated the emphasis on data visualization and storytelling, which are crucial skills often overlooked in technical courses."</p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="reviewer-image">
+                      <img src="https://via.placeholder.com/100x100" alt="David Kim">
+                    </div>
+                    <div>
+                      <h4 class="font-medium text-sm">David Kim</h4>
+                      <p class="text-xs text-muted">Business Intelligence Analyst</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="review-card card">
+                  <div class="card-content">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"I had tried several online courses before, but none of them provided the depth and hands-on experience that this program offers. The mentorship was invaluable, and I now have a portfolio of projects that impressed my current employer."</p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="reviewer-image">
+                      <img src="https://via.placeholder.com/100x100" alt="Maria Rodriguez">
+                    </div>
+                    <div>
+                      <h4 class="font-medium text-sm">Maria Rodriguez</h4>
+                      <p class="text-xs text-muted">Data Scientist at Amazon</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="cta-box">
+                <h3 class="text-xl font-bold mb-2">Join Our Community of Successful Graduates</h3>
+                <p class="text-muted mb-4">
+                  Over 2,000 students have completed our course and gone on to work at top companies 
+                  like Google, Amazon, Microsoft, and more.
+                </p>
+                <a href="{{ url_for('course_page', course='data_science', module='module1', lesson='lesson1') }}" class="btn btn-secondary">Enroll Now</a>
+              </div>
+            </div>
+
+            <!-- FAQ Tab -->
+            <div id="faq" class="tab-content">
+              <h2 class="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+              <p class="text-muted mb-6">
+                Find answers to common questions about our data science course. If you don't see your 
+                question here, feel free to contact us.
+              </p>
+              
+              <div class="faq-list">
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <span>Do I need prior programming experience for this course?</span>
+                    <i class="fas fa-chevron-down"></i>
+                  </div>
+                  <div class="faq-answer">
+                    <p>While some basic programming knowledge is helpful, our course is designed to accommodate beginners. We start with Python fundamentals and gradually build up to more complex concepts. We provide additional resources and support for those new to programming.</p>
+                  </div>
+                </div>
+                
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <span>How much time should I dedicate to the course each week?</span>
+                    <i class="fas fa-chevron-down"></i>
+                  </div>
+                  <div class="faq-answer">
+                    <p>We recommend allocating 15-20 hours per week to get the most out of the course. This includes watching lectures, completing assignments, working on projects, and participating in mentoring sessions.</p>
+                  </div>
+                </div>
+                
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <span>Will I receive a certificate upon completion?</span>
+                    <i class="fas fa-chevron-down"></i>
+                  </div>
+                  <div class="faq-answer">
+                    <p>Yes, you will receive a certificate of completion that you can share on your LinkedIn profile and with potential employers. Our certificates are recognized by many leading tech companies.</p>
+                  </div>
+                </div>
+                
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <span>Is there job placement assistance?</span>
+                    <i class="fas fa-chevron-down"></i>
+                  </div>
+                  <div class="faq-answer">
+                    <p>We offer comprehensive career support, including resume reviews, interview preparation, and connections to our hiring partners. While we don't guarantee job placement, our graduates have a high success rate in finding data science positions.</p>
+                  </div>
+                </div>
+                
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <span>Can I access the course materials after completion?</span>
+                    <i class="fas fa-chevron-down"></i>
+                  </div>
+                  <div class="faq-answer">
+                    <p>Yes, you will have lifetime access to all course materials, including future updates. This allows you to revisit concepts and stay current with evolving data science practices.</p>
+                  </div>
+                </div>
+                
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <span>Are there any prerequisites for the course?</span>
+                    <i class="fas fa-chevron-down"></i>
+                  </div>
+                  <div class="faq-answer">
+                    <p>A basic understanding of mathematics (algebra and statistics) is recommended. No prior experience with data science or machine learning is required.</p>
+                  </div>
+                </div>
+                
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <span>Is financial aid available?</span>
+                    <i class="fas fa-chevron-down"></i>
+                  </div>
+                  <div class="faq-answer">
+                    <p>We offer flexible payment plans and scholarships for qualified applicants. Please contact our admissions team for more information about financial assistance options.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="cta-box">
+                <h3 class="text-lg font-medium mb-2">Still have questions?</h3>
+                <p class="text-muted mb-4">
+                  Our team is ready to answer any questions you may have about the course, 
+                  prerequisites, or career opportunities.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                  <a href="#" class="btn btn-primary">Contact Us</a>
+                  <a href="#" class="btn btn-secondary">Schedule a Call</a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3 class="footer-heading">Data Science Bootcamp</h3>
+            <p class="text-sm text-muted mb-4">
+              Transform your career with our comprehensive data science course. 
+              Learn from industry experts and gain practical skills.
+            </p>
+            <div class="footer-social">
+              <a href="#" class="social-icon" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="social-icon" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="social-icon" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div>
+            <h3 class="footer-heading">Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Courses</a></li>
+              <li><a href="#">Testimonials</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Career Support</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="footer-heading">Legal</h3>
+            <ul class="footer-links">
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+              <li><a href="#">Refund Policy</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="footer-heading">Subscribe</h3>
+            <p class="text-sm text-muted mb-4">
+              Subscribe to our newsletter to receive updates on new courses, 
+              webinars, and special offers.
+            </p>
+            <div class="flex flex-col space-y-2">
+              <input type="email" placeholder="Your email address" class="p-2 border rounded">
+              <button class="btn btn-primary">Subscribe</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; <script>document.write(new Date().getFullYear())</script> Data Science Bootcamp. All rights reserved.</p>
+          <p>Contact us: <a href="mailto:info@datasciencebootcamp.com">info@datasciencebootcamp.com</a></p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="{{ url_for('static', filename='courseLP.js') }}"></script>
+</body>
+</html>
